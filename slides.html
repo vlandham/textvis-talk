@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <title>Text Visualization</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="assets/deck.css">
+    <script src="vendor/jquery.min.js" type="text/javascript"></script>
+  </head>
+</html>
+<body>
+  <textarea id="source">class:center,middle
+# Text Visualization
+
+## An Exploration of Visual Mappings
+
+---
+class:middle
+# Size
+---
+
+<br/>
+<br/>
+![word cloud](assets/wordcloud.png)
+[Wordclouds](https://www.jasondavies.com/wordcloud/#)
+
+Classic Wordle
+---
+
+<br/>
+<br/>
+![bad word cloud](assets/bad_cloud.png)
+[](http://www.theonion.com/graphic/most-used-words-in-the-gettysburg-address-34609)
+
+Token's can also be multi-word tokens
+---
+
+<br/>
+<br/>
+![analytical word cloud](assets/comparison_cloud.png)
+
+A more analytically oriented word cloud
+---
+
+<br/>
+<br/>
+![bubble cloud](assets/bubble.png)
+
+[Bubble Cloud](http://www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html)
+
+[Bubble Cloud Tutorial](http://vallandingham.me/building_a_bubble_cloud.html)
+
+---
+class:middle
+# Position
+---
+
+![text arc](assets/textarc.gif)
+
+[TextArc](http://www.textarc.org/Stills.html)  /  [Interactive Version](http://vallandingham.me/textarc/)
+
+
+---
+
+![stereotropes](assets/stereotropes.png)
+
+[Stereotropes](http://stereotropes.bocoup.com/)
+
+---
+
+![wordwanderer](assets/wordwanderer.png)
+
+[WordWanderer](http://wordwanderer.org/)
+
+---
+class:middle
+# Structure
+---
+
+<br/>
+<br/>
+<br/>
+<br/>
+![concordance](assets/concordance.png)
+[Quick Concordance Plots](http://vallandingham.me/concordance_plot/)
+
+---
+
+
+![Literature Fingerprints](assets/fingerprints.png)
+
+[Literature Fingerprints](https://kops.uni-konstanz.de/bitstream/handle/123456789/5492/Literature_Fingerprinting.pdf)
+
+Sentence Length
+
+---
+<br/><br/>
+![Literature Fingerprints](assets/fingerprints3.png)
+
+
+Hapax Legomena
+
+_(Words that occur only once in the document)_
+---
+
+![word tree](assets/wordtree.png)
+[Word Tree](https://www.jasondavies.com/wordtree/?source=alice-in-wonderland.txt&prefix=cried)
+
+---
+
+![origin of species](assets/origin.png)
+[The Origin of Species](http://fathom.info/traces)
+
+
+---
+class:middle
+# Time
+---
+<!-- ![history flow](assets/history_flow.png)
+[History Flow](http://www.bewitched.com/historyflow.html) -->
+
+<!-- --- -->
+
+<!-- ![Notabilia](assets/notabilia.png)
+[Notabilia](http://notabilia.net/) -->
+
+<!-- --- -->
+
+<br/>
+<br/>
+![how the internet talks](assets/internet_talks.png)
+<br/>
+<br/>
+[How the Internet Talks](http://projects.fivethirtyeight.com/reddit-ngram/?keyword=lol.win.omg.cute.fail.wtf&start=20071015&end=20150831&smoothing=10)
+
+<!-- ---
+
+<br/>
+<br/>
+![billboard](assets/billboard.png)
+[Decade Specific Song Words](http://www.prooffreader.com/2014/12/most-decade-specific-words-in-billboard.html) -->
+
+---
+class:middle
+# Collections
+---
+
+![pop sci](assets/popsci.png)
+[Popular Science Archive Explorer](http://www.popsci.com/content/wordfrequency#Elephant)
+
+---
+
+![Dissertation browser](assets/dissertation.png)
+[Dissertation Browser](http://www-nlp.stanford.edu/projects/dissertations/browser.html)
+
+<!-- ![Landscape of Words](assets/landscape.png)
+[Landscape of Words](http://www.azinman.com/landscapeofwords/)
+
+--- -->
+---
+class:center,middle
+# Artistic Representations
+
+---
+
+![lit org](assets/lit_org.jpg)
+[Literary Organism](http://www.stefanieposavec.co.uk/personal/#/writing-without-words/)
+
+---
+
+![lit org](assets/lit_org2.jpg)
+[Literary Organism](http://www.stefanieposavec.co.uk/personal/#/writing-without-words/)
+
+---
+
+![sentence drawings](assets/sentence.jpg)
+[Sentence Drawings](http://www.stefanieposavec.co.uk/personal/#/writing-without-words/)
+
+---
+
+![code sentence drawings](assets/code_sentence.png)
+[Sentence Drawings (Code Based)](http://vallandingham.me/sentence_drawings/#gatsby)
+
+---
+<br/>
+<br/>
+![punc](assets/punc.jpg)
+
+[Between the Words](http://www.c82.net/work/?id=347)
+
+---
+
+<!-- ![rep](assets/rep.png)
+
+[Visualizing Repetition](http://projects.chass.utoronto.ca/chwp/CHC2007/Ruecker_etal/Ruecker_etal.htm)
+
+--- -->
+
+![rep](assets/rep2.png)
+
+[Visualizing Repetition](http://projects.chass.utoronto.ca/chwp/CHC2007/Ruecker_etal/Ruecker_etal.htm)
+
+---
+
+
+# And Many More
+
+![collection](assets/collection.png)
+[Academic Text Vis Collection](http://textvis.lnu.se/)
+
+---
+
+class:middle,center,inverse
+# Now It's Your Turn!
+</textarea>
+  <script src="vendor/remark.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var slideshow = remark.create();
+  </script>
+  <script src="vendor/underscore.js" type="text/javascript"></script>
+  <script src="vendor/d3.js" type="text/javascript"></script>
+  
+
+  <script>
+  var links = document.links;
+
+  for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+    if (links[i].hostname != window.location.hostname) {
+      links[i].target = '_blank';
+    }
+  }
+  </script>
+</body>
