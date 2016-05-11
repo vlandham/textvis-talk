@@ -201,6 +201,126 @@ class:center,middle
 # But what does _Interesting_ mean?
 ---
 # Is it most frequent?
+
+## Word frequency of _Alice in Wonderland_
+
+```
+textkit tokens2counts alice_tokens.txt
+
+, 2418
+the 1617
+' 1127
+. 975
+and 810
+to 720
+a 620
+she 544
+it 539
+of 499
+said 462
+! 450
+alice 395
+was 366
+i 364
+in 358
+you 356
+that 284
+-- 264
+```
+---
+## What about removing punctuation and stop words?
+
+```
+textkit tokens2counts alice_filtered.txt
+
+said 462
+alice 395
+-- 264
+little 128
+one 99
+would 90
+know 87
+could 86
+like 85
+went 83
+queen 75
+thought 74
+time 68
+see 67
+king 62
+began 58
+turtle 58
+hatter 56
+mock 56
+quite 55
+gryphon 54
+think 53
+way 53
+```
+
+---
+# Problem
+
+Commonly used words in a language are not very informative.
+
+What if we could find less common words used more frequently in a document?
+
+<br/><br/>
+
+That's the idea of TF-IDF!
+
+But we use a large set of documents as a proxy for an entire language.
+---
+# TF-IDF
+
+*TF* : Term Frequency : Number of times a word appears in a document.
+
+*DF* : Document Frequency : Number of documents a word appears in.
+
+Example:
+
+>Doc 1 has turtle 3 times
+
+>Doc 2 has turtle 0 times
+
+>Doc 3 has turtle 12 times
+
+Document Frequency is _2_.
+
+*IDF* : Inverse Document Frequency : ` 1 / DF`
+
+<br/>
+
+So TF-IDF is:
+
+```
+TF * 1 / DF
+```
+
+---
+
+TF-IDF is is just:
+
+```
+TF * 1 / DF
+```
+
+<br/>
+
+but not really, typically there is a bit more work to it:
+
+```
+(TF / DL) * log(1 + N / document frequency)
+```
+
+Where `DL` is the Document Length of the document you are looking at.
+
+And `N` is the number of documents total.
+
+<br/><br/>
+
+[Term Weighting for Humanists](https://porganized.com/2016/03/09/term-weighting-for-humanists/)
+
 ---
 class:center,middle,inverse
 # Text Visualization
