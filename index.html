@@ -10,7 +10,197 @@
   <textarea id="source">
 class:center,middle
 # Text Analysis & Visualization
+---
+class:center,middle,inverse
+# Text Analysis
 
+---
+# What is Text Data?
+---
+# What is Text Data?
+
+![text data](assets/text_data_types.png)
+
+(source: Chris Collins)
+---
+# What can I do with it?
+---
+# What can I do with it?
+
+<br/><br/>
+
+* Summarize a report or article
+* Cluster and group a bunch of documents
+* Understand and map cultural differences in language
+* Understand how language changes over time
+---
+class:middle,center
+# How?
+
+# With Analysis & Visualization!
+---
+class:middle
+
+# Motivating Examples
+---
+
+## Many Bills
+
+![Many Bills](assets/many_bills.png)
+<br>
+
+> [by _Yannick Assogba, Irene Ros, et al_](http://clome.info/papers/manybills_chi.pdf)
+---
+
+## The Largest Vocabulary in Hip Hop
+
+![The Largest Vocabulary in Hip Hop](assets/rapper-vocab.png)
+
+> [by _Matt Daniels_](http://poly-graph.co/vocabulary.html)
+---
+class:center,middle,inverse
+# Intro to Text Analysis
+
+## (Enough to google search later)
+---
+# Analysis at Differet Angles
+<br/><br/>
+
+* Basic text data processing
+* Comparing words in documents
+* Comparing and clustering documents
+
+
+---
+# Common Text Processing Procedures
+
+# (Using [textkit](http://learntextvis.github.io/textkit/))
+
+<br/>
+
+`http://learntextvis.github.io/textkit/`
+
+---
+# Tokenization
+
+```
+pride.txt:
+
+Mrs. Bennet deigned not to make any reply,
+but, unable to contain herself,
+began scolding one of her daughters.
+```
+
+`textkit text2words pride.txt`
+
+```
+Mrs.
+Bennet
+deigned
+not
+to
+make
+any
+reply
+,
+ut
+,
+unable
+to
+contain
+herself
+,
+began
+scolding
+one
+of
+her
+daughters
+.
+```
+---
+# Not just for Single Words!
+
+```
+textkit text2ngrams pride.txt
+
+Mrs. Bennet
+Bennet deigned
+deigned not
+not to
+to make
+make any
+any reply
+reply ,
+, but
+but ,
+, unable
+unable to
+to contain
+contain herself
+herself ,
+, began
+began scolding
+scolding one
+one of
+of her
+her daughters
+daughters .
+```
+---
+# Filtering and Transforming Tokens
+
+
+## Punctuation Removal
+
+```
+textkit filterpunc tokens.txt
+```
+
+## Stop Word Removal
+
+```
+textkit filterwords tokens.txt
+```
+
+## Normalizing Case
+
+```
+texkit tokens2lower tokens.txt
+```
+---
+# Stemming Word Tokens
+
+```
+tokens.txt:
+
+houses
+housed
+house
+
+textkit tokens2stem tokens.txt
+
+hous
+hous
+hous
+
+```
+---
+# Then what?
+
+_want:_
+
+# Text ⟿ Understanding
+
+_get:_
+
+# Text ⟿ Interesting Words
+
+---
+class:center,middle
+# But what does _Interesting_ mean?
+---
+# Is it most frequent?
 ---
 class:center,middle,inverse
 # Text Visualization

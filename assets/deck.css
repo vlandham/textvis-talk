@@ -28,7 +28,9 @@ h3 { font-size: 1.6em; }
   position: absolute;
   bottom: 3em;
 }
-ul li { line-height: 1.55em; }
+ul li { line-height: 1.6em;
+  font-size: 1.4em;
+}
 /*li p { line-height: 1.25em; }*/
 .red { color: #fa0000; }
 .large { font-size: 2em; }
