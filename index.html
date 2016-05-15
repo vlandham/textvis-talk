@@ -272,7 +272,7 @@ Commonly used words in a language are not very informative.
 
 What if we could find less common words used more frequently in a document?
 
-<br/><br/>
+#Term Frequency - Inverse Document Frequency
 
 That's the idea of TF-IDF!
 
@@ -335,25 +335,103 @@ class:center,middle
 ---
 # Comparing Documents
 
+<br/><br/>
+
+> Is Shakespeare more like E.L. James or L. Ron Hubbard?
+
+> Which of these 1,000 documents are most like each other?
+
+> Is this news article something that has been reported on before or something new?
+
 ---
 # General Idea:
+
+<br/><br/>
 
 > Use the metrics calculated for a single document
 
 > Combine for a lot of documents
 
-> Represent in a vectorizable way
+> Represent in a big matrix
+
+> Use geometry and vector math to compare
 ---
 # Document Matrix
+---
+# Each Row is a Vector
 
+<br/><br/>
+
+> Through `N` dimensional space, where `N` is the number of unique words in all documents.
+
+# Cosine Similarity
+
+> Can use to measure the angle between vectors and thus the similarity between them.
 ---
 ![vec space](assets/vector-space-2d-manning.png)
+---
 
+# Similarity Scores
+
+Compare each Document with every other document.
+
+```
+[[ 1.          0.90245148  0.88100055  0.89342744  0.88611794]
+ [ 0.90245148  1.          0.91397211  0.94348224  0.92777444]
+ [ 0.88100055  0.91397211  1.          0.97169195  0.98256162]
+ [ 0.89342744  0.94348224  0.97169195  1.          0.98316233]
+ [ 0.88611794  0.92777444  0.98256162  0.98316233  1.        ]]
+```
 ---
 # Clustering
 
 ![k means](assets/k_mean_send.gif)
 ---
+# What Else could be used as scores?
+
+> TF-IDF !
+
+> Other Measures (log likelihood)
+
+> Part-of-Speech Weighting?
+---
+# POS Tagging
+
+```
+textkit tokens2counts tokens.txt
+
+Mrs.,NNP
+Bennet,NNP
+deigned,VBD
+not,RB
+to,TO
+make,VB
+any,DT
+reply,NN
+",",","
+but,CC
+",",","
+unable,JJ
+to,TO
+contain,VB
+herself,PRP
+",",","
+began,VBD
+scolding,VBG
+one,CD
+of,IN
+her,PRP$
+daughters,NNS
+.,.
+
+```
+---
+
+![](assets/syntaxnet.png)
+
+> [Syntaxnet](http://googleresearch.blogspot.com/2016/05/announcing-syntaxnet-worlds-most.html?m=1)
+---
+class:middle,center
 # Bonus Round
 
 # Word Vectors
