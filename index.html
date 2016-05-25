@@ -272,7 +272,14 @@ Commonly used words in a language are not very informative.
 
 What if we could find less common words used more frequently in a document?
 
-#Term Frequency - Inverse Document Frequency
+---
+# Problem
+
+Commonly used words in a language are not very informative.
+
+What if we could find less common words used more frequently in a document?
+
+##Term Frequency - Inverse Document Frequency
 
 That's the idea of TF-IDF!
 
@@ -328,6 +335,21 @@ And `N` is the number of documents total.
 
 [Term Weighting for Humanists](https://porganized.com/2016/03/09/term-weighting-for-humanists/)
 
+---
+
+TF-IDF for _Alice in Wonderland_
+```
+[('alice', 0.4020951929645576),
+ ('said', 0.12007273993951809),
+ ('queen', 0.08817475297888497),
+ ('turtle', 0.0842118811010307),
+ ('hatter', 0.07992992104504608),
+ ('mock', 0.07992992104504608),
+ ('gryphon', 0.07707528100772301),
+ ('duchess', 0.05994744078378456),
+ ('dormouse', 0.05709280074646149),
+ ('rabbit', 0.055256178533434584)]
+```
 ---
 class:center,middle
 # Comparing Documents
@@ -393,7 +415,7 @@ Compare each Document with every other document.
 
 > TF-IDF !
 
-> Other Measures (log likelihood)
+> Remove Stop Words
 
 > Part-of-Speech Weighting?
 ---
@@ -432,6 +454,8 @@ daughters,NNS
 ![](assets/syntaxnet.png)
 
 > [Syntaxnet](http://googleresearch.blogspot.com/2016/05/announcing-syntaxnet-worlds-most.html?m=1)
+
+> Parsey McParseface
 ---
 class:middle,center
 # Bonus Round
@@ -450,6 +474,17 @@ class:middle,center
 ---
 # Compare Different Languages!
 ![](assets/vector_space_model_multilingual1.png)
+
+---
+# `Vec` the world
+
+![](assets/vecs.png)
+
+> [awesome-2vec](https://github.com/MaxwellRebo/awesome-2vec)
+---
+class:middle,center
+
+## learntextvis.github.io/textkit/
 
 ---
 class:center,middle,inverse
@@ -567,21 +602,15 @@ class:middle
 <br/>
 [How the Internet Talks](http://projects.fivethirtyeight.com/reddit-ngram/?keyword=lol.win.omg.cute.fail.wtf&start=20071015&end=20150831&smoothing=10)
 
----
+<!-- ---
 ![history flow](assets/history_flow.png)
-[History Flow](http://www.bewitched.com/historyflow.html)
+[History Flow](http://www.bewitched.com/historyflow.html) -->
 
 ---
 
 ![Notabilia](assets/notabilia.png)
 [Notabilia](http://notabilia.net/)
 
-<!-- ---
-
-<br/>
-<br/>
-![billboard](assets/billboard.png)
-[Decade Specific Song Words](http://www.prooffreader.com/2014/12/most-decade-specific-words-in-billboard.html) -->
 
 ---
 class:middle
@@ -596,10 +625,6 @@ class:middle
 ![Dissertation browser](assets/dissertation.png)
 [Dissertation Browser](http://www-nlp.stanford.edu/projects/dissertations/browser.html)
 
-<!-- ![Landscape of Words](assets/landscape.png)
-[Landscape of Words](http://www.azinman.com/landscapeofwords/)
-
---- -->
 ---
 class:center,middle
 # Artistic Representations
@@ -633,12 +658,6 @@ class:center,middle
 
 ---
 
-<!-- ![rep](assets/rep.png)
-
-[Visualizing Repetition](http://projects.chass.utoronto.ca/chwp/CHC2007/Ruecker_etal/Ruecker_etal.htm)
-
---- -->
-
 ![rep](assets/rep2.png)
 
 [Visualizing Repetition](http://projects.chass.utoronto.ca/chwp/CHC2007/Ruecker_etal/Ruecker_etal.htm)
@@ -650,6 +669,11 @@ class:center,middle
 
 ![collection](assets/collection.png)
 [Academic Text Vis Collection](http://textvis.lnu.se/)
+
+---
+class:middle,center
+
+## http://vallandingham.me/textvis-talk/
 
 ---
 
